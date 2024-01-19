@@ -231,3 +231,22 @@ https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Registry+of+s
 
 
 
+## Was ist der Unterschied zwischen Factur-X und ZUGFeRD
+Factur-X 1.0.50 ist der französische und internationale Name von ZUGFeRD 2.1. Der Factur-X-Dateiname (factur-x.xml) und Metadaten (RDF-Metadaten mit dem Namespace Prefix „fx“) sind seit ZUGFeRD 2.1 bevorzugt.
+
+## Ist meine Berechnungsmethode korrekt? 
+Die Berechnung von elektronischen Rechnungen ist im Rahmen von EN16931-1 normiert, das kostenlos online bezogen werden kann, in Deutschland im Shop der DIN angegliederten Beuth Verlags.
+
+## Welche Attributwerte kann ich verwenden?
+Die entsprechenden Codelisten werden vom CEF verwaltet und veröffentlicht. Sie sind Teil des ZUGFeRD Infopakets.
+Gibt es kostenlose Tools?
+Unter http://zugferd.org/ gibt es eine Liste von Open-Source-Tools die direkt oder indirekt mit ZUGFeRD zu tun haben. 
+
+## Kann ich alle PDF-Dateien für ZUGFeRD verwenden?
+ZUGFeRD basiert auf archivierbaren (PDF/A) PDFs, die alle zur Darstellung benötigten Daten wie Schriftarten einbetten. Eine kostenlose Möglichkeit „normale“ PDF-Dateien zu konvertieren stellt beispielsweise Ghostscript dar. 
+
+## Wie sieht eine ZUGFeRD-Datei aus
+Abgesehen von der Identifikation in den Metadaten ist beispielsweise im Adobe Reader ist eine ZUGFeRD-Datei durch Hinweis auf PDF-A und das Büroklammersymbol mit der eingebetten Datei zugferd-invoice.xml oder factur-x.xml ersichtlich. 
+
+
+
