@@ -1,4 +1,4 @@
-* xref:inline-text-formatting.adoc[]
+* xref:index.adoc[]
 * xref:special-characters.adoc[]
 * xref:admonition.adoc[]
 * xref:sidebar.adoc[]
