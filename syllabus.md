@@ -16,6 +16,8 @@ and we might later use their learning levels
 * K2: Understand
 * K3: Apply
 
+Attributes: Dependencies, how long, how important, how interactive,
+how known, how autonomous, how popular
 
 
 * [Legal and compliance](#__refheading___toc9517_339098550)
