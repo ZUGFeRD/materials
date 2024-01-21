@@ -250,3 +250,38 @@ Abgesehen von der Identifikation in den Metadaten ist beispielsweise im Adobe Re
 
 
 
+## Common issues when writing
+* paper-invisible attributes like VAT exemption reason codes
+* Decimals
+* Schema+Schematron
+* Fixed Namespace Prefixes
+* Codelists, formal and semantic
+* STK=Stück? → Quba-viewer.org
+* Why 1..n tax currency?
+* Gross price definition correct?
+* HATE test: Have your EN16931-1 handy
+* Check totals
+
+
+## Common issues when reading
+
+* Filename can be 
+  * zugferd-invoice.xml, 
+  * xrechnung.xml, 
+  * ZUGFeRD-invoice.xml,
+  * cida.xml (Deliver-X prerelease),
+  * order-x.xml or 
+  * factur-x.xml (default)
+* PDF
+  * embedded files may have „alias“ filenames
+  * can be embedded using „flat“ or „tree“ method
+  * PDF parts can be compressed
+  * PDF/A-4?
+* XML
+  * may contain UTF8-BOM
+  * Venetian blinds design pattern
+  * Attached files may be attached as additional PDF embedded file, or, 
+in case of XRechnung, base64 encoded within the XML
+
+
+
