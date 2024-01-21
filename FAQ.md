@@ -1,3 +1,10 @@
+## Stand B2B
+Vermittlungsausschuss vgl https://dip.bundestag.de/vorgang/gesetz-zur-st%C3%A4rkung-von-wachstumschancen-investitionen-und-innovation-sowie-steuervereinfachung/303318?term=Wachstumschancengesetz&f.wahlperiode=20&rows=25&pos=1
+Details und Hintergründe https://www.heise.de/hintergrund/Pflicht-zur-E-Rechnung-im-XML-Format-Das-ist-der-Status-quo-9593920.html (kostenpflichtig) oder https://medium.com/@jochen.staerk/why-and-how-germany-bans-b2b-paper-invoices-a4c7977f314a
+
+
+## XRechnung automatisiert
+Die Kosit, sozusagen die Behörde für Behördenrechnungen, hat sich dem EDI-Netzwerk Peppol angeschlossen und den API-Zugriff aufs ZRE eingestellt. Das bedeutet die einzige Möglichkeit Behördenrechnungen in Deutschland komplett automatisiert einzureichen ist über Peppol. Man muss die Peppol-Rechnung nicht nur weiterhin ans richtige Portal addressieren, man muss sich wohl auch bei jedem Portal vorher kurz (immerhin automatisiert) freischalten.
 
 ## PDF
 Converting any PDF input to PDF/A-3 is out of scope for the mustangproject tool&library, because it is too complex, you can not just filter out some things, usually you need to completely rebuild a valid pdf/a, ghostscript  is a very good and AFAIK the only open source solution which can handle that (see https://github.com/ZUGFeRD/mustangproject/issues/164#issuecomment-640046774).
