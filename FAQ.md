@@ -1,6 +1,21 @@
+# ZUGFeRD/Factur-X/Order-X/Deliver-X Frequently Asked Questions 
 ## Stand B2B
 Vermittlungsausschuss vgl https://dip.bundestag.de/vorgang/gesetz-zur-st%C3%A4rkung-von-wachstumschancen-investitionen-und-innovation-sowie-steuervereinfachung/303318?term=Wachstumschancengesetz&f.wahlperiode=20&rows=25&pos=1
 Details und Hintergründe https://www.heise.de/hintergrund/Pflicht-zur-E-Rechnung-im-XML-Format-Das-ist-der-Status-quo-9593920.html (kostenpflichtig) oder https://medium.com/@jochen.staerk/why-and-how-germany-bans-b2b-paper-invoices-a4c7977f314a
+
+## Abkürzung: Was heißt eigentlich ZUGFeRD?
+ZUGFeRD hieß mal Zentraler User Guide Forum elektronische Rechnung Deutschland.
+Das "ZUG" im Name war möglicherweise eine Hommage an die MUG, die Message User Group, die 
+CWA erarbeitete und damit definierte welche Teilmenge bspw. von CII für den
+europäischen Gebraucht wichtig ist: USt bspw, ja, Nordamerikanische Sales tax bspw. nein.
+Der internationale Name wurde Factur-X. 
+Aus historischen Gründen wurde Factur-X 1 released als ZUGFeRD gerade Version 2 erreichte,
+ZUGFeRD 2 entspricht also Factur-X 1.
+
+Nach Order-X und nach Beginn aber vor Abschluss der Arbeiten (an Lieferscheinen, genannt
+Deliver-X) wurde ZUGFeRD zur Formatfamilie: Der Begriff wechselte in den Plural,
+Zentrale User Guides Forum elektronische Rechnung Deutschland, die Abkürzung blieb
+(vgl https://www.ferd-net.de/aktuelles/meldungen/rueckblick-auf-die-sitzung-des-ferd-plenums.html).
 
 
 ## XRechnung automatisiert
@@ -53,51 +68,6 @@ Frankreich https://www.edicomgroup.com/en_US/news/13617-france-prepares-for-mand
 
 Deutschland https://www.verband-e-rechnung.org/pdfs/VeR-Studie_Clearance_2020.pdf
 
-## Gartenzaun
-
-
-Ulrike Linde
-am
-23. Februar 2020
-
-
-die Konstruktion der URIs für CIUS und Extensions ist in TR16931-5 Kapitel 6.8 beschrieben. Kapitel 6.9 formuliert Empfehlungen zur Validierung:
-
-
-
-The creation of the validation artefacts can be done in two main ways.
-
-- By modifying the validation artefacts from the underlying specification. In this case the invoice
-  instance document may be validated with a single set of artefacts in one run.
-
-- By creating an new set of validation artefacts that only tests for the differences that are defined by
-  the extension specification.
-
-
-
-Although both approaches may be used, their technical feasibility depends on the nature of the extensions. When both approaches are feasible the second one is preferred since the differences between the extension specification and its underlying specification can be better monitored when these two sets are run sequentially. This also reduces the risk that the extension specification that is created, results in not-conformant invoice instances without that being identified until the extension specification is in full production.
-
-( Der Text ist der FprCEN TR 16931-5 entnommen, daher bitte nochmal mit der finalen Version vergleichen.)
-
-
-
-Das Argument von Andreas ergibt sich implizit: Er wird nur für Extensions von einer Anpassung der Validierungsartefakte gesprochen. Im Umkehrschluss würde dies bedeuten, dass für alle CIUS derselbe Validierer genutzt werden soll.
-
-
-
-Allerdings ist Teil 5 nur ein Technical Report und nicht verbindlich wie die Norm EN16931-1. Wir hatten im CEN schon einmal darüber gesprochen, die Formulierungen aus Abschnitt 6.8 und 6.9 TR19531-5 in Kapitel 7 der EN16931-1 aufzunehmen, aber das geht nur im Rahmen eines Amendments.
-
-## DevSupport
-Hi,
-First of all: Thanks for your interest in my project you can use for free both commercially and noncommercially.
-
-Even if you forgot to write it, I assume you at least mentally wanted to thank me for that: You are very welcome.
-
-You can book me for commercial support.
-
-For community support (i.e. noncommercial/free support) please refer to https://groups.google.com/g/zugferd, where I also frequently responding to questions.
-
-This does not only help you faster (because other community members may be able to answer some of your questions), it also helps to keep a record of frequently asked questions I need to document better in the future.
 
 ## OpenSource
 I have tried to document other open source solutions on https://www.zugferd.org/
@@ -173,34 +143,6 @@ SONDERN eben 354,46*0,25=88,615~88,62 also
 6) add accrding methods in the invoice class
 
 
-## Mustangserver
-The Java Mustang library and command line tools are open source, but as there were never substantial community contributions to Mustangserver we decided to publish the newer versions proprietary. That will most likely remain like this, unless our internal legal audit tells us otherwise.
-
-If you want to contribute to the initial (open source, Dropwizard based) versions of Mustangserver: the source code is still available on Github. I think it was still called Mustang Rest API at that point.
-
-Otherwise: feel free to subscribe to Mustangserver, if you want I can send you the contract in english (I believe on the website the draft is only german). 
-
-
-## Mustangserver onboarding
-
-Hi,
-
-Please use username <> with the password <> on  https://api.usegroup.de
-
-A manual is available on https://www.mustangproject.org/files/manual-0.8.0.pdf.
-
-Feel free to use it for some weeks, I attached a draft contract how the final agreement could look like.
-
-Quick start: If you select the most recent version on https://api.usegroup.de, login and select click on the blue "try out" button (not the link in the navigation) on the next page you should be able to click a "get test key" button.
-
-e.g. when you open the "ping" operation and click "try it out" and "execute" you should get a "pong" response.
-
-Of course the whole thing is a openapi/swagger, so you can import it in postman or generate clients for 56 programming languages on https://editor.swagger.io/ .
-
-Is that OK/understandable? Is the performance OK?
-
-Are there any operations you miss?
-
 
 ## Opensource
 
@@ -223,14 +165,6 @@ Muster-Verfahrensdokumentation zum ersetzenden Scannen https://www.bstbk.de/down
 
 Muster-Verfahrensdokumentation für Belegablage https://www.awv-net.de/upload/pdf/Belegablage_V1_20151026.pdf nachschiebe
 
-## Name
-
-Nach Order-X und nach Beginn aber vor Abschluss der Arbeiten (an Lieferscheinen, genannt
-Deliver-X) wurde ZUGFeRD zur Formatfamilie: Der Begriff wechselte in den Plural,
-Zentrale User Guides Forum elektronische Rechnung Deutschland, die Abkürzung blieb
-(vgl https://www.ferd-net.de/aktuelles/meldungen/rueckblick-auf-die-sitzung-des-ferd-plenums.html).
-Aus historischen deutschfranzösischen Freundschaftsgründen
-noch Version 1 genannt, ist Factur-X Version 1 jetzt streng genommen das e-Rechnungsformat von ZUGFeRD Version 2.
 
 ## Codelisten
 
@@ -254,41 +188,5 @@ ZUGFeRD basiert auf archivierbaren (PDF/A) PDFs, die alle zur Darstellung benöt
 
 ## Wie sieht eine ZUGFeRD-Datei aus
 Abgesehen von der Identifikation in den Metadaten ist beispielsweise im Adobe Reader ist eine ZUGFeRD-Datei durch Hinweis auf PDF-A und das Büroklammersymbol mit der eingebetten Datei zugferd-invoice.xml oder factur-x.xml ersichtlich. 
-
-
-
-## Common issues when writing
-* paper-invisible attributes like VAT exemption reason codes
-* Decimals
-* Schema+Schematron
-* Fixed Namespace Prefixes
-* Codelists, formal and semantic
-* STK=Stück? → Quba-viewer.org
-* Why 1..n tax currency?
-* Gross price definition correct?
-* HATE test: Have your EN16931-1 handy
-* Check totals
-
-
-## Common issues when reading
-
-* Filename can be 
-  * zugferd-invoice.xml, 
-  * xrechnung.xml, 
-  * ZUGFeRD-invoice.xml,
-  * cida.xml (Deliver-X prerelease),
-  * order-x.xml or 
-  * factur-x.xml (default)
-* PDF
-  * embedded files may have „alias“ filenames
-  * can be embedded using „flat“ or „tree“ method
-  * PDF parts can be compressed
-  * PDF/A-4?
-* XML
-  * may contain UTF8-BOM
-  * Venetian blinds design pattern
-  * Attached files may be attached as additional PDF embedded file, or, 
-in case of XRechnung, base64 encoded within the XML
-
 
 
