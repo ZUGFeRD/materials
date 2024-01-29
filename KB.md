@@ -69,14 +69,18 @@ Zu gesetzlichen Verpflichtungen: es gibt zwar seit 30.07.2021 die § 6 Satz 2 Ka
 
 
 ## Common issues when writing
-* paper-invisible attributes like VAT exemption reason codes
-* Decimals
-* Schema+Schematron
-* Fixed Namespace Prefixes
-* Codelists, formal and semantic
-* STK=Stück? → Quba-viewer.org
-* Why 1..n tax currency?
-* Gross price definition correct?
+* PDF/A
+  * Dont forget RDF and XMP Extension Schema
+  * A/1 to A/3 works but may be huge
+* XML
+  * paper-invisible attributes like VAT exemption reason codes
+  * Decimals
+  * Check against Schema+Schematron
+  * Fixed Namespace Prefixes
+  * Codelists, formal and semantic
+  * STK=Stück? → Quba-viewer.org
+  * Why 1..n tax currency?
+  * Gross price definition correct?
 * HATE test: Have your EN16931-1 handy
 * Check totals
 
