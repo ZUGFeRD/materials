@@ -85,14 +85,18 @@ Was mit UBL/CII/EN16931 beispielsweise nicht geht ist die Bruttorechnungsthemati
 Zu gesetzlichen Verpflichtungen: es gibt zwar seit 30.07.2021 die § 6 Satz 2 KassenSichV, i.e. die QR-Code-Norm https://www.bzst.de/SharedDocs/Downloads/DE/Aussenpruefung/dsfinv_k_v_2_4.zip?__blob=publicationFile&v=7 , aber ein Bon ist eine Kleinbetragsrechnung und was da spezifiziert wird hält sich an keinen internationalen Standard. Da bin ich und viele meiner Kollegen einfach raus,  elektronische Rechnungen bspw. i.S.v. EN16931 berücksichtigen nur "richtige" Rechnungen (in Deutschland ab 250€, mit Pflichtangaben wie Name und Anschrift des Kunden). Anonym ist der QR-Code übrigens auch nicht, weil u.a. genau das Protokoll der Kartenzahlung, sofern erfolgt, mitgeliefert werden muss. 
 
 ## Common issues when writing
-* paper-invisible attributes like VAT exemption reason codes
-* Decimals and rounding. And, please, use arbitrary precision
-* Schema+Schematron
-* Fixed Namespace Prefixes
-* Codelists, formal and semantic
-* STK=Stück? → Quba-viewer.org
-* Why 1..n tax currency?
-* Gross price definition correct?
+* PDF/A
+  * Dont forget RDF and XMP Extension Schema
+  * A/1 to A/3 works but may be huge
+* XML
+  * paper-invisible attributes like VAT exemption reason codes
+  * Decimals and rounding. And, please, use arbitrary precision
+  * Check against Schema+Schematron
+  * Fixed Namespace Prefixes
+  * Codelists, formal and semantic
+  * STK=Stück? → Quba-viewer.org
+  * Why 1..n tax currency?
+  * Gross price definition correct?
 * HATE test: Have your EN16931-1 handy
 * Check totals
 
