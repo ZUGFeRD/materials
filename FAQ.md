@@ -18,6 +18,16 @@ Zentrale User Guides Forum elektronische Rechnung Deutschland, die Abkürzung bl
 (vgl https://www.ferd-net.de/aktuelles/meldungen/rueckblick-auf-die-sitzung-des-ferd-plenums.html).
 
 
+## Europa
+mit dem EU-Richtlinienentwurf Vat in the Digital Age (ViDA) https://audiovisual.ec.europa.eu/en/topnews/M-009199 arbeitet man dran, zumindest was grenzüberschreitende Geschäfte angeht.
+
+Und ViDA möchte da auf dem B2G-E-Rechnungsstandard EN16931 aufbauen. 
+
+## Was ist ein USt-Meldesystem
+
+Es gibt eine ganze Reihe von möglichen Umsatzsteuermeldesystemtypen (vgl Kollmann https://www.pagero.com/downloads/documents/compliance/Next_Generation_Model-Decentralised_CTC_and_Exchange_v1.pdf S.6: Italien ist Centralized Clearance, EU~Frankreich ist EESPA, i.e. Decentralized CTC and Exchange) und Deutschland versucht schonmal mit der Vorgabe, EN16931 zu benutzen kompatibel zum zukünftigen europäischen System zu werden.
+
+
 ## XRechnung automatisiert
 Die Kosit, sozusagen die Behörde für Behördenrechnungen, hat sich dem EDI-Netzwerk Peppol angeschlossen und den API-Zugriff aufs ZRE eingestellt. Das bedeutet die einzige Möglichkeit Behördenrechnungen in Deutschland komplett automatisiert einzureichen ist über Peppol. Man muss die Peppol-Rechnung nicht nur weiterhin ans richtige Portal addressieren, man muss sich wohl auch bei jedem Portal vorher kurz (immerhin automatisiert) freischalten.
 
@@ -143,8 +153,16 @@ SONDERN eben 354,46*0,25=88,615~88,62 also
 6) add accrding methods in the invoice class
 
 
+## How can I write
+### Requirements
+### How can I check
+## What is the content-difference between ZUGFeRD/Factur-X and XRechnung 
 
-## Opensource
+## How can I read
+
+## Where do I get examples
+
+## Mustang effort
 
 My aim is to provide tools which, at least for SMEs, understand invoices and help e.g. SMEs implement their e-invoices and then they can choose if they want a XRechnung, a Factur-X or maybe sometimes a FatturaPA or a UBL.
 
@@ -170,6 +188,10 @@ Muster-Verfahrensdokumentation für Belegablage https://www.awv-net.de/upload/pd
 
 https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Registry+of+supporting+artefacts+to+implement+EN16931
 
+## Where do I get schema files/further info
+Schema, Schematron, Samples, Spec, Reference and Codelists are available via 
+the ZF Infopaket https://www.ferd-net.de/ZUGFeRD-Download
+
 
 
 ## Was ist der Unterschied zwischen Factur-X und ZUGFeRD
@@ -177,6 +199,7 @@ Factur-X 1.0.50 ist der französische und internationale Name von ZUGFeRD 2.1. D
 
 ## Ist meine Berechnungsmethode korrekt? 
 Die Berechnung von elektronischen Rechnungen ist im Rahmen von EN16931-1 normiert, das kostenlos online bezogen werden kann, in Deutschland im Shop der DIN angegliederten Beuth Verlags.
+https://www.beuth.de/en/standard/din-en-16931-1/314992770
 
 ## Welche Attributwerte kann ich verwenden?
 Die entsprechenden Codelisten werden vom CEF verwaltet und veröffentlicht. Sie sind Teil des ZUGFeRD Infopakets.

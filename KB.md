@@ -23,6 +23,23 @@ ViDA (EU) Pläne: https://ec.europa.eu/commission/presscorner/detail/en/ip_22_75
 
 Folgende Typen: Kollmann https://www.pagero.com/downloads/documents/compliance/Next_Generation_Model-Decentralised_CTC_and_Exchange_v1.pdf 
 
+## Report issues
+
+ https://github.com/ConnectingEurope/eInvoicing-EN16931/issues 
+
+
+
+about validation artefacts, versioning and general considerations
+
+
+https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Validations
+
+
+about release dates and how to comment / create an issue
+https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Registry+of+supporting+artefacts+to+implement+EN16931#RegistryofsupportingartefactstoimplementEN16931-Regularreleaseschedule
+
+
+
 ## Gartenzaun
 
 
@@ -67,10 +84,9 @@ Was mit UBL/CII/EN16931 beispielsweise nicht geht ist die Bruttorechnungsthemati
 
 Zu gesetzlichen Verpflichtungen: es gibt zwar seit 30.07.2021 die § 6 Satz 2 KassenSichV, i.e. die QR-Code-Norm https://www.bzst.de/SharedDocs/Downloads/DE/Aussenpruefung/dsfinv_k_v_2_4.zip?__blob=publicationFile&v=7 , aber ein Bon ist eine Kleinbetragsrechnung und was da spezifiziert wird hält sich an keinen internationalen Standard. Da bin ich und viele meiner Kollegen einfach raus,  elektronische Rechnungen bspw. i.S.v. EN16931 berücksichtigen nur "richtige" Rechnungen (in Deutschland ab 250€, mit Pflichtangaben wie Name und Anschrift des Kunden). Anonym ist der QR-Code übrigens auch nicht, weil u.a. genau das Protokoll der Kartenzahlung, sofern erfolgt, mitgeliefert werden muss. 
 
-
 ## Common issues when writing
 * paper-invisible attributes like VAT exemption reason codes
-* Decimals
+* Decimals and rounding. And, please, use arbitrary precision
 * Schema+Schematron
 * Fixed Namespace Prefixes
 * Codelists, formal and semantic
@@ -98,6 +114,7 @@ Zu gesetzlichen Verpflichtungen: es gibt zwar seit 30.07.2021 die § 6 Satz 2 Ka
 * XML
     * may contain UTF8-BOM
     * Venetian blinds design pattern
+    * Please, use arbitrary precision
     * Attached files may be attached as additional PDF embedded file, or,
       in case of XRechnung, base64 encoded within the XML
 
