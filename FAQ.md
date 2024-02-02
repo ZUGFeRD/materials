@@ -158,6 +158,7 @@ SONDERN eben 354,46*0,25=88,615~88,62 also
 ### How can I check
 ## What is the content-difference between ZUGFeRD/Factur-X and XRechnung 
 
+## Where can I ask questions
 ## How can I read
 
 ## Where do I get examples
