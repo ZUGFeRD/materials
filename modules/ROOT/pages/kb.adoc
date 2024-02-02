@@ -1,4 +1,4 @@
-== ZUGFeRD/Factur-X/Order-X/Deliver-X Knowledge base
+= Knowledge base
 
 === Namespace prefixes
 

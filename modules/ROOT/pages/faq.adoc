@@ -1,4 +1,4 @@
-== ZUGFeRD/Factur-X/Order-X/Deliver-X Frequently Asked Questions
+= Frequently Asked Questions
 
 === Stand B2B
 
