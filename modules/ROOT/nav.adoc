@@ -1,6 +1,6 @@
 * xref:index.adoc[]
 * xref:special-characters.adoc[]
-* xref:admonition.adoc[]
+* xref:imprint.adoc[]
 * xref:sidebar.adoc[]
 * xref:ui-macros.adoc[]
 * Lists
