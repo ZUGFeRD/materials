@@ -1,5 +1,5 @@
 site:
-  title: Antora Docs
+  title: ZUGFeRD Info
   start_page: component-a::index.adoc
 content:
   sources:
