@@ -9,6 +9,8 @@ https://www.heise.de/hintergrund/Pflicht-zur-E-Rechnung-im-XML-Format-Das-ist-de
 (kostenpflichtig) oder
 https://medium.com/@jochen.staerk/why-and-how-germany-bans-b2b-paper-invoices-a4c7977f314a
 
+=== How do I know it's ZUGFeRD/how many do I already have/what is the market share?
+
 === Abkürzung: Was heißt eigentlich ZUGFeRD?
 
 ZUGFeRD hieß mal Zentraler User Guide Forum elektronische Rechnung

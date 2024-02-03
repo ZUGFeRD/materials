@@ -1,5 +1,5 @@
-name: component-a
-title: ZF Open Source
+name: public-info
+title: ZF public info
 version: 1.0.0
 start_page: index.adoc
 asciidoc:

@@ -1,6 +1,6 @@
 site:
   title: ZUGFeRD Info
-  start_page: component-a::index.adoc
+  start_page: public-info::index.adoc
 content:
   sources:
   - url: https://github.com/ZUGFeRD/materials.git
