@@ -1,12 +1,16 @@
 = Frequently Asked Questions
 
-=== When will it be Mandatory
+=== When will it be Mandatory in Germany
 
-Vermittlungsausschuss vgl
+B2G is already, B2B
+
+The mediation committee will meet on 21.02.2024 and afterwards the Federal Countil (Bundesrat) will have to agree, so the date when it could be decided will be
+22.03.2024. https://www.bundestag.de/resource/blob/941108/fe2650c9b2fbfdf2a274000936b337df/sitz_pdf_24.pdf Please note that 2025 was a target date and the Federal Countil requested two more years
+
 https://dip.bundestag.de/vorgang/gesetz-zur-st%C3%A4rkung-von-wachstumschancen-investitionen-und-innovation-sowie-steuervereinfachung/303318?term=Wachstumschancengesetz&f.wahlperiode=20&rows=25&pos=1
-Details und Hintergründe
+details 
 https://www.heise.de/hintergrund/Pflicht-zur-E-Rechnung-im-XML-Format-Das-ist-der-Status-quo-9593920.html
-(kostenpflichtig) oder
+(paywall) or
 https://medium.com/@jochen.staerk/why-and-how-germany-bans-b2b-paper-invoices-a4c7977f314a
 
 === How do I know it's ZUGFeRD/how many do I already have/what is the market share?
@@ -36,7 +40,7 @@ at least as far as cross-border transactions are concerned.
 
 And ViDA wants to build on the B2G e-invoicing standard EN16931.
 
-=== Was ist ein USt-Meldesystem
+=== Continous Transaction Control (CTC) (USt-Meldesystem)
 
 There is a whole range of Continous Transaction Control (CTC) systems, in german called VAT reporting system types (Umsatzsteuer-Meldesystem) (cf
 Kollmann
@@ -48,7 +52,7 @@ European system.
 
 
 
-=== XRechnung automatisiert
+=== How can I automatically submit german B2G invoices
 
 Kosit, the authority for government invoices, so to speak, has joined the
 EDI network Peppol and discontinued API access to the ZRE.
@@ -88,7 +92,7 @@ start in case you are interested.
 
 https://www.beuth.de/en/standard/din-en-16931-1/314992770
 
-=== Gutschrift
+=== Credit Note
 
 real commercial credit note: any non-380 type code, no
 minus BUT cancellation invoice (and that's what 90% mean by credit note):
