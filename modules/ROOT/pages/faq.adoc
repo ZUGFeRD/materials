@@ -11,6 +11,12 @@ https://medium.com/@jochen.staerk/why-and-how-germany-bans-b2b-paper-invoices-a4
 
 === How do I know it's ZUGFeRD/how many do I already have/what is the market share?
 
+=== Who chooses which format is used
+The sender
+
+=== Can I book directly (Dunkelbuchung)
+No
+
 === Abkürzung: Was heißt eigentlich ZUGFeRD?
 
 ZUGFeRD hieß mal Zentraler User Guide Forum elektronische Rechnung
