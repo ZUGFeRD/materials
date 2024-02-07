@@ -15,8 +15,15 @@ https://medium.com/@jochen.staerk/why-and-how-germany-bans-b2b-paper-invoices-a4
 
 === How do I know it's ZUGFeRD/how many do I already have/what is the market share?
 
+=== Can I just convert from one XML format to the other?
+Theoretically yes, but there is no open source XSLT and only  one open source Java
+link:https://github.com/phax/en16931-cii2ubl[library] which only converts in one direction, from CII to UBL
+
+
 === Who chooses which format is used
 The sender
+
+=== What is a profile, which ones exist and why?
 
 === Can I book directly (Dunkelbuchung)
 No
