@@ -1,5 +1,5 @@
-name: public-info
-title: ZF public info
+name: e-invoicing
+title: e-invoicing
 version: 1.0.0
 start_page: index.adoc
 asciidoc:
