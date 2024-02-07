@@ -113,9 +113,10 @@ older than XML based e-invoicing, and still in use today. The
 introduction of (international) e-invoicing standards in germany in fact
 dates back to the 1977 introduction of EDIFACT.
 
-### *APERAK* The XML
-Application error and acknowledgement messages can be used to signal
+### *APERAK*
+The XML Application error and acknowledgement messages can be used to signal
 acceptance or rejection of invoices
+
 ### *unstructured vs structured invoices*
 Unstructured invoices are human-readable (e.g. image files,
 TIFF, PDF even with OCR layer), structured invoices are machine readable
@@ -201,13 +202,14 @@ well as for french B2B invoices.
 PEPPOL is a international
 EDI organization, based on UBL messages and the AS/4 protocol, which
 implement a four-corner model for their paying customers.
+
 ### *E-invoicing vs e-Billing*
 E-Billing, in Germany for amounts <150 Eur,
 allow amounts with VAT which could otherwise not be expressed,
 e.g. 20,20 Eur @ 19%.
 
-### *Document types* Apart from usual invoices,
-sometimes there might be need for reminders (not in scope), credit
+### *Document types*
+Apart from usual invoices, sometimes there might be need for reminders (not in scope), credit
 notes, or corrected invoices. Partial invoice are in scope, collective
 invoices (single invoice on multiple orders) only available in certain
 profiles.

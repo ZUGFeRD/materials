@@ -1,5 +1,6 @@
 = Frequently Asked Questions
 
+== Practical
 === When will it be Mandatory in Germany
 
 B2G is already, B2B
@@ -15,20 +16,117 @@ https://medium.com/@jochen.staerk/why-and-how-germany-bans-b2b-paper-invoices-a4
 
 === How do I know it's ZUGFeRD/how many do I already have/what is the market share?
 
+=== Which formats are eligible?
+
+For B2G and B2B both EN16931-2 XML formats, UBL and CII, are eligible, for ZUGFeRD/Factur-X you have to use CII
+
 === Can I just convert from one XML format to the other?
 Theoretically yes, but there is no open source XSLT and only  one open source Java
 link:https://github.com/phax/en16931-cii2ubl[library] which only converts in one direction, from CII to UBL
 
 
+=== How can I check if a file is valid
+[#validators]
+There are validators which will check for syntax and algorithmic correctness, apart from
+proprietary also some open-sourced
+
+* The link:https://www.zugferd-community.net/de/open_community/validation[ZUGFeRD community] uses the link:https://mustangproject.org[Mustang] engine
+* link:https://services.fnfe-mpe.org/[FNFE] uses a link:https://github.com/akretion/factur-x-validator[odoo based engine] and
+* link:https://ecosio.com/de/peppol-und-xml-dokumente-online-validieren/[Ecosio] (XML only) uses link:https://github.com/phax/phive[PHIVE] as an engine
+
+For semantic correctness you may want to refer to a link:index.adoc#_display[viewer]
+
 === Who chooses which format is used
 The sender
 
+
+== Legal
+=== GoBD
+
+Principles for the proper keeping and storage of books,records and documents in electronic form and fordata access
+
+Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von Büchern,
+Aufzeichnungen und Unterlagen in elektronischer Form sowie zum
+Datenzugriff
+
+https://ao.bundesfinanzministerium.de/ao/2021/Anhaenge/BMF-Schreiben-und-gleichlautende-Laendererlasse/Anhang-64/anhang-64.html
+
+Muster-Verfahrensdokumentation zum ersetzenden Scannen
+https://www.bstbk.de/downloads/bstbk/steuerrecht-und-rechnungslegung/fachinfos/BStBK_Muster-VerfD-ersetzendes-Scannen_v2.0-2019-11-29.pdf
+
+Muster-Verfahrensdokumentation für Belegablage
+https://www.awv-net.de/upload/pdf/Belegablage_V1_20151026.pdf
+nachschiebe
+
+== B2G
+=== How can I automatically submit german B2G invoices
+
+Kosit, the authority for government invoices, so to speak, has joined the
+EDI network Peppol and discontinued API access to the ZRE.
+to the ZRE. This means that the only way to submit government invoices in
+Germany is completely automated is via Peppol. You
+not only still have to address the Peppol invoice to the correct portal
+to the correct portal, you also have to register with each portal beforehand
+(at least automated) beforehand.
+=== XRechnung Referenzprofil CII
+
+XRechnung is defined for UBL and UN/CEFACT, but ZUGFeRD itself in the
+XRechnung reference profile is exclusively a UN/CEFACT format. In the
+review, the corresponding mention (section 3.2.4 on p. 13) was considered sufficient.
+was considered sufficient.
+
+=== XR Version gültig
+
+https://www.xoev.de/xrechnung-16828
+
+
+=== EN16931-1
+
+https://www.beuth.de/en/standard/din-en-16931-1/314992770
+
+== B2B
+=== Continous Transaction Control (CTC) (USt-Meldesystem)
+
+There is a whole range of Continous Transaction Control (CTC) systems, in german called VAT reporting system types (Umsatzsteuer-Meldesystem) (cf
+Kollmann
+https://www.pagero.com/downloads/documents/compliance/Next_Generation_Model-Decentralised_CTC_and_Exchange_v1.pdf
+p.6: Italy is Centralized Clearance, EU~France is EESPA,
+i.e. Decentralized CTC and Exchange) and Germany is already trying
+to become compatible with the future European system with the requirement to use EN16931.
+European system.
+
+=== Countries
+
+Italy
+https://ec.europa.eu/cefdigital/wiki/download/attachments/68331443/CEF%20eInvoicing_2018-12-04%20Stanziale%20-%20Brussels%20%285%29.pdf
+
+France
+https://www.edicomgroup.com/en_US/news/13617-france-prepares-for-mandatory-b2b-e-invoicing.html
+
+Germany
+https://www.verband-e-rechnung.org/pdfs/VeR-Studie_Clearance_2020.pdf
+
+=== Europa
+
+With the EU draft directive link:https://audiovisual.ec.europa.eu/en/topnews/M-009199[Vat in the Digital Age (ViDA)]
+ is being worked on,
+at least as far as cross-border transactions are concerned.
+
+And ViDA wants to build on the B2G e-invoicing standard EN16931.
+
+== Background
+
 === What is a profile, which ones exist and why?
 
-=== Can I book directly (Dunkelbuchung)
-No
+=== When I receive a Factur-X, can I book automatically?
 
-=== Abkürzung: Was heißt eigentlich ZUGFeRD?
+Unfortunately no. E.g. using link:#validators[validators] you may be able to confirm the invoice is calculated
+correctly but you can only book automatically (german: Dunkelbuchung) in ideal circumstances: e.g. if you already
+entered the order in your system and you have confirmation about the incoming goods in your system and the invoice
+refers to the order you will be able to confirm that the invoice also __matches__ your order. Together with
+whitelisted bank details in this case you can probably pay and book automatically.
+
+=== What does the ZUGFeRD abbreviation stand for?
 
 ZUGFeRD was once called Central User Guide Forum Electronic Invoice
 Germany (Zentraler User Guide Forum elektronische Rechnung Deutschland). The ``ZUG'' in the name was possibly a tribute to the
@@ -45,35 +143,8 @@ The term changed to the plural, Zentrale User Guides Forum
 elektronische Rechnung Deutschland, the abbreviation remained (cf
 https://www.ferd-net.de/aktuelles/meldungen/rueckblick-auf-die-sitzung-des-ferd-plenums.html).
 
-=== Europa
-
-With the EU draft directive Vat in the Digital Age (ViDA)
-https://audiovisual.ec.europa.eu/en/topnews/M-009199 is being worked on,
-at least as far as cross-border transactions are concerned.
-
-And ViDA wants to build on the B2G e-invoicing standard EN16931.
-
-=== Continous Transaction Control (CTC) (USt-Meldesystem)
-
-There is a whole range of Continous Transaction Control (CTC) systems, in german called VAT reporting system types (Umsatzsteuer-Meldesystem) (cf
-Kollmann
-https://www.pagero.com/downloads/documents/compliance/Next_Generation_Model-Decentralised_CTC_and_Exchange_v1.pdf
-p.6: Italy is Centralized Clearance, EU~France is EESPA,
-i.e. Decentralized CTC and Exchange) and Germany is already trying
-to become compatible with the future European system with the requirement to use EN16931.
-European system.
 
 
-
-=== How can I automatically submit german B2G invoices
-
-Kosit, the authority for government invoices, so to speak, has joined the
-EDI network Peppol and discontinued API access to the ZRE.
-to the ZRE. This means that the only way to submit government invoices in
-Germany is completely automated is via Peppol. You
-not only still have to address the Peppol invoice to the correct portal
-to the correct portal, you also have to register with each portal beforehand
-(at least automated) beforehand.
 
 === PDF
 
@@ -101,10 +172,6 @@ start in case you are interested.
 
 §6.4.3.1.1
 
-=== EN16931-1
-
-https://www.beuth.de/en/standard/din-en-16931-1/314992770
-
 === Credit Note
 
 real commercial credit note: any non-380 type code, no
@@ -113,9 +180,6 @@ negative quantity->negative price, negative VAT so practically everything
 Minus. Typecode for cancellation invoice I mean 384, there is an
 official ZUGFeRD example.
 
-=== XR Version gültig
-
-https://www.xoev.de/xrechnung-16828
 
 === Schematron
 
@@ -125,13 +189,6 @@ run saxon with the ISO Schematron to create a XSLT-File from the
 schematron file and then run this generated XSLT file on your input.
 There is a description for mac on
 https://blog.eight02.com/2011/05/validating-xml-with-iso-schematron-on.html
-
-=== XRechnung Referenzprofil CII
-
-XRechnung is defined for UBL and UN/CEFACT, but ZUGFeRD itself in the
-XRechnung reference profile is exclusively a UN/CEFACT format. In the
-review, the corresponding mention (section 3.2.4 on p. 13) was considered sufficient.
-was considered sufficient.
 
 === Decimals
 
@@ -144,21 +201,10 @@ where, interestingly, net prices are quoted in two digits.
 Public review 1
 https://www.ferd-net.de/aktuelles/meldungen/public-review-des-entwurfs-fuer-order-x-hat-begonnen-und-laeuft-bis-ende-september-2020.html
 
-=== B2B
-
-Italien
-https://ec.europa.eu/cefdigital/wiki/download/attachments/68331443/CEF%20eInvoicing_2018-12-04%20Stanziale%20-%20Brussels%20%285%29.pdf
-
-Frankreich
-https://www.edicomgroup.com/en_US/news/13617-france-prepares-for-mandatory-b2b-e-invoicing.html
-
-Deutschland
-https://www.verband-e-rechnung.org/pdfs/VeR-Studie_Clearance_2020.pdf
 
 === OpenSource
 
-I have tried to document other open source solutions on
-https://www.zugferd.org/
+I have tried to list all source solutions on link:index.adoc[this page]
 
 === HATE
 
@@ -255,53 +301,34 @@ introduce you, I can show you around, actually we need three more XML
 guys in CC3 alone) and I need every contribution to Mustang and
 Mustangserver. So: May I politely inquire if you plan to contribute?
 
-=== GoBD
 
-Principles for the proper keeping and storage of books,records and documents in electronic form and fordata access
+=== Attribute values
 
-Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von Büchern,
-Aufzeichnungen und Unterlagen in elektronischer Form sowie zum
-Datenzugriff
+The possible Attribute values are shared between UBL and CII, 18 of ~20 lists are available in link:https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Registry+of+supporting+artefacts+to+implement+EN16931[version 12 here].
 
-https://ao.bundesfinanzministerium.de/ao/2021/Anhaenge/BMF-Schreiben-und-gleichlautende-Laendererlasse/Anhang-64/anhang-64.html
-
-Muster-Verfahrensdokumentation zum ersetzenden Scannen
-https://www.bstbk.de/downloads/bstbk/steuerrecht-und-rechnungslegung/fachinfos/BStBK_Muster-VerfD-ersetzendes-Scannen_v2.0-2019-11-29.pdf
-
-Muster-Verfahrensdokumentation für Belegablage
-https://www.awv-net.de/upload/pdf/Belegablage_V1_20151026.pdf
-nachschiebe
-
-=== Codelisten
-
-https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Registry+of+supporting+artefacts+to+implement+EN16931
 
 === Where do I get schema files/further info
 
 Schema, Schematron, Samples, Spec, Reference and Codelists are available
 via the ZF Infopaket https://www.ferd-net.de/ZUGFeRD-Download
 
-=== Was ist der Unterschied zwischen Factur-X und ZUGFeRD
+=== What is the difference between Factur-X and ZUGFeRD
 
 Factur-X 1.0.50 is the French and international name of ZUGFeRD2.1 The Factur-X file name (factur-x.xml) and metadata (RDF metadatawith the namespace prefix "fx") are preferred since ZUGFeRD 2.1.
+
 
 === How invoices are calculated
 
 The calculation of electronic invoices is standardized within the framework of EN16931-1which can be obtained free of charge online, in Germany in the shop of thestore of the DIN-affiliated Beuth publishing house.
 https://www.beuth.de/en/standard/din-en-16931-1/314992770
 
-=== Welche Attributwerte kann ich verwenden?
-
-The corresponding code lists are managed and published by the CEF.published. They are part of the ZUGFeRD info package. Are there any free
-tools? At http://zugferd.org/ there is a list of
-open source tools that are directly or indirectly related to ZUGFeRD.
 
 === Kann ich alle PDF-Dateien für ZUGFeRD verwenden?
 ZUGFeRD is based on archivable (PDF/A) PDFs that embed all the data required fordata required for display, such as fonts.A free
 possibility to convert "normal" PDF files is, for example, Ghostscript.Ghostscript.
 
 
-=== Wie sieht eine ZUGFeRD-Datei aus
+=== How does a ZUGFeRD-/Facur-X file look like
 
 Apart from the identification in the metadata, for example, in the
 Adobe Reader, for example, a ZUGFeRD file is identified by a reference to PDF-A and the
