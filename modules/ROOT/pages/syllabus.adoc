@@ -1,4 +1,4 @@
-== Syllabus
+= Syllabus
 
 This is the attempt to collect e-procurement/ZUGFeRD/XRechnung/Factur-X
 related training topics and texts under a free license (public domain).
@@ -21,94 +21,6 @@ syllabus] and we might later use their learning levels
 
 Attributes: Dependencies, how long, how important, how interactive, how
 known, how autonomous, how popular
-
-* link:#__refheading___toc9517_339098550[Legal and compliance]
-** link:#__refheading___toc9531_339098550[GoBD]
-*** link:#__refheading___toc9533_339098550[Auditing requirements]
-*** link:#__refheading___toc9535_339098550[Invoice retention]
-*** link:#__refheading___toc9537_339098550[Procedural documentation]
-** link:#__refheading___toc9539_339098550[VAT regulations]
-** link:#__refheading___toc9541_339098550[EU/2014/55]
-** link:#__refheading___toc9543_339098550[EN16931]
-** link:#__refheading___toc9545_339098550[E-Government-Gesetz]
-** link:#__refheading___toc9547_339098550[E-Rechnungs-VO]
-** link:#__refheading___toc9549_339098550[E-invoices international]
-** link:#__refheading___toc9551_339098550[Gross price definition]
-** link:#__refheading___toc9553_339098550[Substitutional scans]
-** link:#__refheading___toc9555_339098550[Invoice Recognition and
-ZUGFeRD]
-** link:#__refheading___toc9557_3390985501[Paper-hidden requirements]
-** link:#__refheading___toc9557_33909855012[Reminders]
-
-* link:#__refheading___toc3262_265032451[B2B:]link:#__refheading___toc3262_265032451[Continuous
-Transaction
-Control]link:#__refheading___toc3262_265032451[s]link:#__refheading___toc3262_265032451[4]
-** link:#__refheading___toc9559_339098550[History and generic info]
-*** link:#__refheading___toc9561_339098550[EDI&#44; EDIFACT and APERAK]
-*** link:#__refheading___toc9563_339098550[APERAK]
-*** link:#__refheading___toc9565_339098550[unstructured vs structured
-invoices]
-*** link:#__refheading___toc9567_339098550[UN/CEFACT vs UBL]
-*** link:#__refheading___toc9569_339098550[ZUGFeRD v1]
-*** link:#__refheading___toc9571_339098550[ZUGFeRD v2]
-*** link:#__refheading___toc9573_339098550[Factur-X]
-*** link:#__refheading___toc9575_339098550[Order-X]
-*** link:#__refheading___toc9577_339098550[Deliver-X]
-*** link:#__refheading___toc9579_339098550[unit codes and other
-codelists]
-*** link:#__refheading___toc9581_339098550[XRechnung]
-*** link:#__refheading___toc9583_339098550[Invoice attachments]
-*** link:#__refheading___toc9585_339098550[CIUS vs additional data]
-*** link:#__refheading___toc9587_339098550[Industry recommendations]
-*** link:#__refheading___toc9589_339098550[PEPPOL]
-*** link:#__refheading___toc9591_339098550[E-invoicing vs e-Billing]
-*** link:#__refheading___toc9593_339098550[Document types]
-* link:#__refheading___toc9519_339098550[Tools]
-** link:#__refheading___toc9595_339098550[SDKs]
-** link:#__refheading___toc9597_339098550[Open Source tools]
-** link:#__refheading___toc9599_339098550[Libraries]
-** link:#__refheading___toc9601_339098550[Software stack/Creation tools]
-** link:#__refheading___toc9603_339098550[Consuming applications]
-** link:#__refheading___toc9605_339098550[Validators]
-** link:#__refheading___toc9607_339098550[Miscellaneous tools]
-* link:#__refheading___toc9521_339098550[XML]
-** link:#__refheading___toc9609_339098550[Basics]
-*** link:#__refheading___toc9611_339098550[Well-formedness]
-*** link:#__refheading___toc9613_339098550[Schema]
-*** link:#__refheading___toc9615_339098550[UTF8]
-*** link:#__refheading___toc9617_339098550[Namespaces]
-*** link:#__refheading___toc9619_339098550[UN/CEFACT CII&#44; CIO and
-CIDA]
-*** link:#__refheading___toc9621_339098550[UBL]
-*** link:#__refheading___toc9623_339098550[Xpath]
-*** link:#__refheading___toc9625_339098550[Evaluation]
-*** link:#__refheading___toc9627_339098550[Validators]
-*** link:#__refheading___toc9629_339098550[XSLT]
-*** link:#__refheading___toc9631_339098550[Saxon]
-*** link:#__refheading___toc9633_339098550[Apache FOP]
-*** link:#__refheading___toc9635_339098550[Schematron]
-*** link:#__refheading___toc9637_339098550[Validate using XSLT]
-*** link:#__refheading___toc9639_339098550[Codelists]
-* link:#__refheading___toc9523_339098550[PDF]
-** link:#__refheading___toc9641_339098550[Basics]
-*** link:#__refheading___toc9643_339098550[Creation]
-*** link:#__refheading___toc9645_339098550[Structure analysis]
-*** link:#__refheading___toc9647_339098550[PDF-A]
-*** link:#__refheading___toc9649_339098550[Purpose&#44; ISO Standard]
-*** link:#__refheading___toc9651_339098550[Validation&#44; e.g. using
-VeraPDF]
-*** link:#__refheading___toc9653_339098550[File attachments&#44; PDF/A
-Schema extensions and RDF Metadata]
-** link:#__refheading___toc9525_339098550[Mustang]
-*** link:#__refheading___toc9655_339098550[Reading]
-*** link:#__refheading___toc9657_339098550[Writing]
-*** link:#__refheading___toc9659_339098550[Validation]
-*** link:#__refheading___toc9661_339098550[Conversion]
-*** link:#__refheading___toc9663_339098550[Visualization]
-** link:#__refheading___toc9665_339098550[Quba]
-** link:#__refheading___toc9527_339098550[Integration]
-
-===
 
 === *Legal and compliance*
 

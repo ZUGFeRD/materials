@@ -1,5 +1,5 @@
 * xref:index.adoc[]
-* Further info
-** xref:faq.adoc[]
-** xref:kb.adoc[]
+* xref:faq.adoc[]
+* xref:kb.adoc[]
+* xref:syllabus.adoc[]
 * xref:imprint.adoc[]
