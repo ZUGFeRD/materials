@@ -2,4 +2,5 @@
 * xref:faq.adoc[]
 * xref:kb.adoc[]
 * xref:syllabus.adoc[]
+* xref:history.adoc[]
 * xref:imprint.adoc[]

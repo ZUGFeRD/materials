@@ -24,6 +24,7 @@ For B2G and B2B both EN16931-2 XML formats, UBL and CII, are eligible, for ZUGFe
 Theoretically yes, but there is no open source XSLT and only  one open source Java
 link:https://github.com/phax/en16931-cii2ubl[library] which only converts in one direction, from CII to UBL
 
+== What do I have to archive how?
 
 === How can I check if a file is valid
 [#validators]
