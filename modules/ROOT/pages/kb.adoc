@@ -1,5 +1,6 @@
 = Knowledge base
 
+
 === Namespace prefixes
 
 rsm:, ram:, qdt: and udt are mandatory:
@@ -156,3 +157,63 @@ Kartenzahlung, sofern erfolgt, mitgeliefert werden muss.
 ** Please, use arbitrary precision
 ** Attached files may be attached as additional PDF embedded file, or,
 in case of XRechnung, base64 encoded within the XML
+
+=== HATE test
+=== HATE
+
+Rechnung
+
+1x123,45 19%
+
+1x123,45 19%
+
+Netto 246,90
+
+Ust-Betrag ?
+
+Brutto ?
+
+Vertikal (IMO richtig) addiert man die netto preise zusammen zu 246,90->
+*0,19=46,911 gerundet 46,91 USt -> also 293,81 brutto
+
+1x123,45 19%
+
+1x123,45 19%
+
+Netto 246,90
+
+Ust-Betrag ~46,91
+
+Brutto 293,81
+
+Macht man den Fehler und rechnet pro Zeile 123,45 netto _0,19 bekommt
+man 23,4555->23,46 Ust pro Zeile, das heißt ein einzelner Posten 123,45
+kostet brutto 141,91. Addiert man dann allerdings versehentlich die
+Rundungsfehler bekommt man _** FALSCH *** 1x123,45 19% (brutto ~146,91)
+
+1x123,45 19% (brutto ~146,91)
+
+Netto 246,90 (brutto ~293,82)
+
+Ust-Betrag (vermeintlicher brutto minus netto ) 46,92
+
+Brutto 293,82 *** ENDE FALSCH ***
+
+Das ist ein schöner glatter und vor allem runder Bruttobetrag für 2
+Positionen, aber IMO eben leider falsch. Und es steht sogar im kostenlos
+erhältlichen EN16931-1
+https://www.beuth.de/en/standard/din-en-16931-1/314992770 dass es falsch
+ist, sogar mit einem eigenen (ebenfalls wahrscheinlch zufällig
+gewähltem) Zahlenbeispiel, s. Seite 119, bei 25% Steuern:
+
+Ust-betrag nettobetrag 35,56 142,25 17,84 71,37 14,96 59,85 10,56 42,25
+4,84 19,37 4,84 19,37 ist eben NICHT (*_ACHTUNG FALSCH_*) 88,60 +354,46=
+443,06 SONDERN eben 354,46*0,25=88,615~88,62 also 88,62 +354,46= 443,08
+
+
+
+=== Which german state has which XRechnung regulations?
+https://www.verband-e-rechnung.org/XRechnung/
+
+=== Why do UBL and CII differ?
+https://www.oasis-open.org/committees/download.php/57887/UBL%20and%20CEFACT%20update%20-%2020160407.pdf

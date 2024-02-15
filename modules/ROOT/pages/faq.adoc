@@ -80,10 +80,14 @@ was considered sufficient.
 
 https://www.xoev.de/xrechnung-16828
 
+=== How do I write invoices abroad?
+ http://web.archive.org/web/20220102161033/https://www.psp.eu/media/allgemein/eu-compendium_e-invoicing_and_retention.pdfhttp://web.archive.org/web/20220102161033/https://www.psp.eu/media/allgemein/eu-compendium_e-invoicing_and_retention.pdf https://ec.europa.eu/digital-building-blocks/wikis/display/HOME/2021+eInvoicing+Country+factsheets https://www.signaturportal.de/tutorial,62.html
 
-=== EN16931-1
+=== What were the changes in the latest ZUGFeRD/Factur-X version?
 
-https://www.beuth.de/en/standard/din-en-16931-1/314992770
+=== How to calculate and round invoices? How many decimals are allowed?
+
+https://www.beuth.de/de/norm/din-en-16931-1/327729047
 
 == B2B
 === Continous Transaction Control (CTC) (USt-Meldesystem)
@@ -207,58 +211,6 @@ https://www.ferd-net.de/aktuelles/meldungen/public-review-des-entwurfs-fuer-orde
 
 I have tried to list all source solutions on link:index.adoc[this page]
 
-=== HATE
-
-Rechnung
-
-1x123,45 19%
-
-1x123,45 19%
-
-Netto 246,90
-
-Ust-Betrag ?
-
-Brutto ?
-
-Vertikal (IMO richtig) addiert man die netto preise zusammen zu 246,90->
-*0,19=46,911 gerundet 46,91 USt -> also 293,81 brutto
-
-1x123,45 19%
-
-1x123,45 19%
-
-Netto 246,90
-
-Ust-Betrag ~46,91
-
-Brutto 293,81
-
-Macht man den Fehler und rechnet pro Zeile 123,45 netto _0,19 bekommt
-man 23,4555->23,46 Ust pro Zeile, das heißt ein einzelner Posten 123,45
-kostet brutto 141,91. Addiert man dann allerdings versehentlich die
-Rundungsfehler bekommt man _** FALSCH *** 1x123,45 19% (brutto ~146,91)
-
-1x123,45 19% (brutto ~146,91)
-
-Netto 246,90 (brutto ~293,82)
-
-Ust-Betrag (vermeintlicher brutto minus netto ) 46,92
-
-Brutto 293,82 *** ENDE FALSCH ***
-
-Das ist ein schöner glatter und vor allem runder Bruttobetrag für 2
-Positionen, aber IMO eben leider falsch. Und es steht sogar im kostenlos
-erhältlichen EN16931-1
-https://www.beuth.de/en/standard/din-en-16931-1/314992770 dass es falsch
-ist, sogar mit einem eigenen (ebenfalls wahrscheinlch zufällig
-gewähltem) Zahlenbeispiel, s. Seite 119, bei 25% Steuern:
-
-Ust-betrag nettobetrag 35,56 142,25 17,84 71,37 14,96 59,85 10,56 42,25
-4,84 19,37 4,84 19,37 ist eben NICHT (*_ACHTUNG FALSCH_*) 88,60 +354,46=
-443,06 SONDERN eben 354,46*0,25=88,615~88,62 also 88,62 +354,46= 443,08
-
-
 === How to write ZUGFeRD
 
 ==== Requirements
@@ -273,34 +225,6 @@ Ust-betrag nettobetrag 35,56 142,25 17,84 71,37 14,96 59,85 10,56 42,25
 
 === Where do I get examples
 
-=== Mustang effort
-
-My aim is to provide tools which, at least for SMEs, understand invoices
-and help e.g. SMEs implement their e-invoices and then they can choose
-if they want a XRechnung, a Factur-X or maybe sometimes a FatturaPA or a
-UBL.
-
-https://www.openhub.net/p/mustangproject/estimated_cost estimates I
-invested 653,000€ in Mustangproject . I would say that’s enough but I’m
-still contributing. Also owed to the fact that other people contributed.
-My total revenue until now is probably not even five digits. And these
-650k€ do not even count how much time I invest in the (community work,
-e.g. the homepage and) governance, e.g. I wrote a validator, automated
-tests and I am currently sitting in a Strasbourgh Hotel because I’m
-attending a conference where AWVs CC3 and FNFE convene to decide on
-future factur-x versions and launch Deliver-X.
-
-The fact that Factur-X is based on PDF/A and hardly any tool seems to be
-capable of exporting valid PDF/A is not really a core concern,
-e.g. LibreOffice does a very good export and I tried to describe on
-http://zugferd.org/ what incredibly good job Ghostscript did.
-
-Making e-invoices more accessible: I’m trying my very best, I can’t
-possibly make it more accessible, I’m practically on the verge of
-bankrupcy for it. We need everybody in the standard bodies (I can
-introduce you, I can show you around, actually we need three more XML
-guys in CC3 alone) and I need every contribution to Mustang and
-Mustangserver. So: May I politely inquire if you plan to contribute?
 
 
 === Attribute values
@@ -324,7 +248,7 @@ The calculation of electronic invoices is standardized within the framework of E
 https://www.beuth.de/en/standard/din-en-16931-1/314992770
 
 
-=== Kann ich alle PDF-Dateien für ZUGFeRD verwenden?
+=== Can I use any PDF as basis for a ZUGFeRD/Factur-X
 ZUGFeRD is based on archivable (PDF/A) PDFs that embed all the data required fordata required for display, such as fonts.A free
 possibility to convert "normal" PDF files is, for example, Ghostscript.Ghostscript.
 
