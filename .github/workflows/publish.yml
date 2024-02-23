@@ -41,7 +41,7 @@ jobs:
         with:
           path: docs.zip
       - name: Use URL for something
-        run: find docs-site/build/site/ \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i 's/https://www\.ferd-net\.de/ZUGFeRD-Download/${{ steps.artifact-upload-step.outputs.artifact-url }}/g'
+        run: find docs-site/build/site/ \( -type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i 's/https:\/\/www\.ferd-net\.de/ZUGFeRD-Download/${{ steps.artifact-upload-step.outputs.artifact-url }}/g'
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v2
         with:
