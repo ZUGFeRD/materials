@@ -8,48 +8,48 @@ https://www.zugferd-community.net/de/infothek/technical_xml_regarding_fixed_name
 
 === Format vs Protokoll, EDI
 
-Ich würde grob zwischen Format und Protokoll unterscheiden, das Format
-definiert die Bedeutung (Beispiel deutsche Sprache) und das Protokoll
-die Adressierung, Abfolge und Übertragung (Beispiel Telefon: Erst
-klingelts, dann abnehmen). Beides zusammen ist EDI und ja, da sind erste
-internationale Standards in Deutschland ab 1977 im Einsatz. Es ist nur
-superkomplex, allein weil jede Firma in jedem EDI eine andere Adresse
-hat - und nicht jede Firma hat EDI im Einsatz, geschweige denn jedes
+A format
+defines the meaning (example German language) and the protocol
+addressing, sequence and transmission (example telephone: first ring, then answer).
+ring, then pick up). Both together are EDI. It is only
+super complex, simply because every company has a different address in every EDI
+address - and not every company uses EDI, let alone every
 EDI.
 
-Insofern ist die Frage nach dem Format aus der CII oder UBL
-herausgegangen sind die Frage nach dem was wäre denn der kleinste
-gemeinsame Nenner aus dem wir maschinenlesbar das rausholen können was
-wir brauchen.
+In this respect, the question of the format from which CII or UBL
+the question of what would be the lowest common denominator from which we could
+common denominator from which we can get what we need in a machine-readable
+what we need.
 
-Peppol ist UBL als Format und AS/4 als Protokoll, by the way. AS/4 ist
-dabei angeblich https-ähnlich.
+Peppol is UBL as a format and AS/4 as a protocol, by the way. AS/4 is
+supposedly similar to https.
 
 === Frankreich
 
-Frankreich stellt OpenApi-Beschreibungen zur Verfügung (vgl
+France provides OpenApi descriptions (cf
 https://communaute.chorus-pro.gouv.fr/wp-content/uploads/2020/04/External_Specifications_API_Appendix_V5.00.pdf
-verweist auf das API Management der Franzose,
-https://developer.aife.economie.gouv.fr/, da kann man sich auch mit
-einer deutschen USt ID anmelden und OpenAPI-Dateien für deren
-Schnittstelle ziehen), in Deutschland gab es aber nur für B2G eine
-konventionelle menschenlesbare Spezifikation für ein REST API das
-mittlerweile abgeschaltet ist und es wird wohl keins für B2B geben.
+refers to the API management of the French,
+https://developer.aife.economie.gouv.fr/, where you can also register with
+a German VAT ID and pull OpenAPI files for their interface.
+interface), but in Germany there was only a conventional human-readable
+conventional human-readable specification for a REST API that has
+is now switched off and there will probably not be one for B2B.
 
 === USt Meldesystem
 
-Nach der Empfangspflicht und nach der Sendepflicht soll das
-Umsatzsteuermeldesystem in einem dritten Schritt eingeführt werden. Da
-wirds dann spannend, das wäre eine Schnittstelle bei der OpenAPI oder
-WSDL total Sinn macht, ich meine aber irgendwo meine ich gelesen zu
-haben, dass man die XML-Pflicht schonmal haben wollen würde gerade weil
-es beim Umsatzsteuermeldesystem gerade nicht so schnell vorangeht. Und
-das wird dann wesentlich später entschieden und veröffentlicht. ViDA
-(EU) Pläne:
+After the obligation to receive and after the obligation to send, the
+VAT reporting system is to be introduced in a third step. That
+then becomes exciting, that would be an interface for which OpenAPI or
+WSDL makes total sense, but I think I read somewhere that the XML obligation
+that they would like to have the XML obligation precisely because
+the VAT reporting system is not progressing so quickly at the moment. And
+this will be decided and published much later. ViDA
+(EU) plans:
 https://ec.europa.eu/commission/presscorner/detail/en/ip_22_7514
 
-Folgende Typen: Kollmann
+The following types: Kollmann
 https://www.pagero.com/downloads/documents/compliance/Next_Generation_Model-Decentralised_CTC_and_Exchange_v1.pdf
+
 
 === Report issues
 
@@ -62,20 +62,35 @@ https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Validations
 about release dates and how to comment / create an issue
 https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Registry+of+supporting+artefacts+to+implement+EN16931#RegistryofsupportingartefactstoimplementEN16931-Regularreleaseschedule
 
-=== Gartenzaun
+=== How can I find out which standard is used
+Fundamentally, the root element of UBL is invoice or creditmemo, whereas the root
+element of ZUGFeRD 1 used to be CrossIndustryDocument and of Cross Industry Invoice
+(ZUGFeRD 2, Factur-X) is CrossIndustryInvoice. In CII structures, you will find more
+information in the guideline ID
+/rsm:ExchangedDocumentContext/ram:GuidelineSpecifiedDocumentContextParameter/ram:ID
 
-Ulrike Linde am 23. Februar 2020
+e.g.
+urn:cen.eu:en16931:2017 being EN16931 profile,
+urn:cen.eu:en16931:2017#conformant#urn:factur-x.eu:1p0:extended
+being extended, XRechnung 2.1
+urn:cen.eu:en16931:2017#compliant#urn:xoev-de:kosit:standard:xrechnung_2.1
+or for XR 3.0.1
+urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0
 
-die Konstruktion der URIs für CIUS und Extensions ist in TR16931-5
-Kapitel 6.8 beschrieben. Kapitel 6.9 formuliert Empfehlungen zur
-Validierung:
+=== Hash
+
+Ulrike Linde on February 23, 2020
+
+The construction of the URIs for CIUS and extensions is described in TR16931-5
+Chapter 6.8 is described. Chapter 6.9 formulates recommendations for
+validation:
 
 The creation of the validation artefacts can be done in two main ways.
 
 * By modifying the validation artefacts from the underlying
 specification. In this case the invoice instance document may be
 validated with a single set of artefacts in one run.
-* By creating an new set of validation artefacts that only tests for the
+* By creating a new set of validation artefacts that only tests for the
 differences that are defined by the extension specification.
 
 Although both approaches may be used, their technical feasibility
@@ -87,38 +102,35 @@ the risk that the extension specification that is created, results in
 not-conformant invoice instances without that being identified until the
 extension specification is in full production.
 
-( Der Text ist der FprCEN TR 16931-5 entnommen, daher bitte nochmal mit
-der finalen Version vergleichen.)
+(The text is taken from FprCEN TR 16931-5, so please compare it again with the final version.
+the final version).
 
-Das Argument von Andreas ergibt sich implizit: Er wird nur für
-Extensions von einer Anpassung der Validierungsartefakte gesprochen. Im
-Umkehrschluss würde dies bedeuten, dass für alle CIUS derselbe
-Validierer genutzt werden soll.
+Andreas' argument is implicit: he is only exempt from adapting the validation specification for
+extensions that the validation artifacts have been adapted. Conversely
+Conversely, this would mean that the same validator should be used for all CIUS.
+validator should be used for all CIUS.
 
-Allerdings ist Teil 5 nur ein Technical Report und nicht verbindlich wie
-die Norm EN16931-1. Wir hatten im CEN schon einmal darüber gesprochen,
-die Formulierungen aus Abschnitt 6.8 und 6.9 TR19531-5 in Kapitel 7 der
-EN16931-1 aufzunehmen, aber das geht nur im Rahmen eines Amendments.
+However, Part 5 is only a technical report and not a combined validator.
 
-=== Bruttopreise
+=== Gross invoices (Bruttorechnungen)
 
-Was mit UBL/CII/EN16931 beispielsweise nicht geht ist die
-Bruttorechnungsthematik, gewisse ``Regalpreise'' wie 9,99€ brutto bei
-19% bekommt man beispielsweise gar nicht EN16931-konform berechnet:
-8,39€ netto wären 9,98€ Zahlbetrag, 8,40€ sind hingegen schon 10€.
+What does not work with UBL/CII/EN16931, for example, is the
+gross calculation, certain ``rack prices'' such as 9,99€ gross at
+19%, for example, cannot be calculated in accordance with EN16931:
+8.39€ net would amount to 9.98€ to be paid, 8.40€ to already 10€.
 
-=== Kassenbons
+=== Receipts
 
-Zu gesetzlichen Verpflichtungen: es gibt zwar seit 30.07.2021 die § 6
-Satz 2 KassenSichV, i.e. die QR-Code-Norm
+Digital receipts in Germany:
+
+Regarding legal obligations: since 30.07.2021, there has been § 6
+sentence 2 KassenSichV, i.e. the QR code standard
 https://www.bzst.de/SharedDocs/Downloads/DE/Aussenpruefung/dsfinv_k_v_2_4.zip?__blob=publicationFile&v=7
-, aber ein Bon ist eine Kleinbetragsrechnung und was da spezifiziert
-wird hält sich an keinen internationalen Standard. Da bin ich und viele
-meiner Kollegen einfach raus, elektronische Rechnungen bspw. i.S.v.
-EN16931 berücksichtigen nur ``richtige'' Rechnungen (in Deutschland ab
-250€, mit Pflichtangaben wie Name und Anschrift des Kunden). Anonym ist
-der QR-Code übrigens auch nicht, weil u.a. genau das Protokoll der
-Kartenzahlung, sofern erfolgt, mitgeliefert werden muss.
+but a receipt is a low-value invoice and what is specified there
+does not adhere to any international standard. I and many of my
+of my colleagues, electronic invoices, for example, in the sense of
+EN16931 only take into account fully fledged invoices (in Germany from
+250€, with mandatory information such as the customer's name and address).
 
 === Common issues when writing
 
@@ -159,57 +171,36 @@ Kartenzahlung, sofern erfolgt, mitgeliefert werden muss.
 in case of XRechnung, base64 encoded within the XML
 
 === HATE test
-=== HATE
 
-Rechnung
+HOritontal Addition TEst: VAT amounts need to be added first, then the tax is applied
+"vertically".
 
-1x123,45 19%
 
-1x123,45 19%
+E.g. if you have an invoice
+[cols="1,1,1"]
+|===
+|1x
+|123,45€
+|19%
+|1x
+|123,45€
+|19%
+|Total
+|246,90€
+|19%
+|===
 
-Netto 246,90
+You take the net total per VAT rate, in that case 19%, apply it, and round it to cents,
+i.e. 246,90*0,19=46,911 ~ 46,91 and add it to the total line amount, in this case
+amounting to 293,81.
 
-Ust-Betrag ?
+I.e. it is __not__ correct to calculate "horizontally", ropund it to cent
+123,45*0.19=23,4555~23,46, add it to the line total, which would give you
+2x146,91=293,82€.
 
-Brutto ?
-
-Vertikal (IMO richtig) addiert man die netto preise zusammen zu 246,90->
-*0,19=46,911 gerundet 46,91 USt -> also 293,81 brutto
-
-1x123,45 19%
-
-1x123,45 19%
-
-Netto 246,90
-
-Ust-Betrag ~46,91
-
-Brutto 293,81
-
-Macht man den Fehler und rechnet pro Zeile 123,45 netto _0,19 bekommt
-man 23,4555->23,46 Ust pro Zeile, das heißt ein einzelner Posten 123,45
-kostet brutto 141,91. Addiert man dann allerdings versehentlich die
-Rundungsfehler bekommt man _** FALSCH *** 1x123,45 19% (brutto ~146,91)
-
-1x123,45 19% (brutto ~146,91)
-
-Netto 246,90 (brutto ~293,82)
-
-Ust-Betrag (vermeintlicher brutto minus netto ) 46,92
-
-Brutto 293,82 *** ENDE FALSCH ***
-
-Das ist ein schöner glatter und vor allem runder Bruttobetrag für 2
-Positionen, aber IMO eben leider falsch. Und es steht sogar im kostenlos
-erhältlichen EN16931-1
-https://www.beuth.de/en/standard/din-en-16931-1/314992770 dass es falsch
-ist, sogar mit einem eigenen (ebenfalls wahrscheinlch zufällig
-gewähltem) Zahlenbeispiel, s. Seite 119, bei 25% Steuern:
-
-Ust-betrag nettobetrag 35,56 142,25 17,84 71,37 14,96 59,85 10,56 42,25
-4,84 19,37 4,84 19,37 ist eben NICHT (*_ACHTUNG FALSCH_*) 88,60 +354,46=
-443,06 SONDERN eben 354,46*0,25=88,615~88,62 also 88,62 +354,46= 443,08
-
+There is a different and slightly more complex example explicitly mentioned in
+the (free) https://www.beuth.de/en/standard/din-en-16931-1/314992770[EN16931-1],
+pg 119 with 25% Taxes.
 
 
 === Which german state has which XRechnung regulations?

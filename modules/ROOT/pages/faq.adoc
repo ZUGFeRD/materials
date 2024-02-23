@@ -188,7 +188,7 @@ official ZUGFeRD example.
 
 === Schematron
 
-if you e.g. want to check the CEN schematron you might have to get that
+if you e.g. want to check the CEN schematron you might have to get that
 schematron, java, saxon, and the ``ISO Schematron'' transformation and
 run saxon with the ISO Schematron to create a XSLT-File from the
 schematron file and then run this generated XSLT file on your input.
@@ -244,7 +244,8 @@ Factur-X 1.0.50 is the French and international name of ZUGFeRD2.1 The Factur-X 
 
 === How invoices are calculated
 
-The calculation of electronic invoices is standardized within the framework of EN16931-1which can be obtained free of charge online, in Germany in the shop of thestore of the DIN-affiliated Beuth publishing house.
+The calculation of electronic invoices is standardized within the framework of EN16931-1which can be obtained free of charge online, in Germany in the shop of the
+store of the DIN-affiliated Beuth publishing house.
 https://www.beuth.de/en/standard/din-en-16931-1/314992770
 
 
