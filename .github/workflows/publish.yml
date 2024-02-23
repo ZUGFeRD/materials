@@ -35,6 +35,9 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           path: docs-site/build/site
+          env-url: FOOBAR
+      - name: Use URL for something
+        run: echo "${{ env.FOOBAR }}"
       - name: Zip Docs
         uses: montudor/action-zip@v1
         with:
