@@ -39,6 +39,10 @@ jobs:
         uses: montudor/action-zip@v1
         with:
           args: zip -qq -r docs.zip docs-site/build/site
+      - name: Upload Zip
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: docs.zip
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
