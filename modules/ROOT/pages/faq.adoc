@@ -1,8 +1,11 @@
 = Frequently Asked Questions
 
 == Practical
-=== When will it be Mandatory in Germany
+=== When will it be mandatory in Germany
 
+
+.Matrix © 2024 Andreas Pelekies validool.org
+image::Tabelle_Zeitlicher_Ablauf.svg[Matrix © 2024 Andreas Pelekies validool.org]
 B2G is already, B2B
 
 The mediation committee will meet on 21.02.2024 and afterwards the Federal Countil (Bundesrat) will have to agree, so the date when it could be decided will be
@@ -194,6 +197,13 @@ run saxon with the ISO Schematron to create a XSLT-File from the
 schematron file and then run this generated XSLT file on your input.
 There is a description for mac on
 https://blog.eight02.com/2011/05/validating-xml-with-iso-schematron-on.html
+
+
+=== Why the two formats UBL and CII
+Why UBL and CII is explained in EN16931-2, https://www.beuth.de/de/technische-regel/din-cen-ts-16931-2/274991011
+why CII developed in the first place after UBL is explained on https://www.oasis-open.org/committees/download.php/57887/UBL%20and%20CEFACT%20update%20-%2020160407.pdf
+and that Factur-X is allowed has been laid down in https://www.dstv.de/wp-content/uploads/2023/10/BMF_2023-0922192-R.pdf
+
 
 === Decimals
 
