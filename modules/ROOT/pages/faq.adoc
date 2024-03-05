@@ -89,7 +89,7 @@ https://www.xoev.de/xrechnung-16828
 
 === ZUGFeRD/Factur-X: XML or PDF: What do I have to use, check, respectively archive how?
 
-In Germany, if you are a company, you will have to check and use XML (source) and archive at least XML (GoBD page 30, §9.1 Maschinelle Auswertbarkeit).
+In Germany, if you are a company, you will have to check and use XML (source https://www.dstv.de/wp-content/uploads/2023/10/BMF_2023-0922192-R.pdf) and archive also at least XML (GoBD page 30, §9.1 Maschinelle Auswertbarkeit).
 As customer, you can decide if you check&use XML or PDF. However, and despite the spec says the contents should be identical, due to possible fraud please do not check e.g. only the PDF and then pay the XML version. Unfortunately, if you wanted to auto detect deviations you need OCR and a invoice recognition and your results will most likely not be perfect. 
 Hoewever, if you receive by email, unless there is any invoice related information in the email text (like "as agreed on the phone just pay half of it") you usually have no obligation to archive the email.
 
