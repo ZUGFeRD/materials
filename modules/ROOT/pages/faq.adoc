@@ -27,8 +27,6 @@ For B2G and B2B both EN16931-2 XML formats, UBL and CII, are eligible, for ZUGFe
 Theoretically yes, but there is no open source XSLT and only  one open source Java
 link:https://github.com/phax/en16931-cii2ubl[library] which only converts in one direction, from CII to UBL
 
-== What do I have to archive how?
-
 === How can I check if a file is valid
 [#validators]
 There are validators which will check for syntax and algorithmic correctness, apart from
@@ -72,6 +70,7 @@ Germany is completely automated is via Peppol. You
 not only still have to address the Peppol invoice to the correct portal
 to the correct portal, you also have to register with each portal beforehand
 (at least automated) beforehand.
+
 === XRechnung Referenzprofil CII
 
 XRechnung is defined for UBL and UN/CEFACT, but ZUGFeRD itself in the
@@ -87,6 +86,12 @@ https://www.xoev.de/xrechnung-16828
  http://web.archive.org/web/20220102161033/https://www.psp.eu/media/allgemein/eu-compendium_e-invoicing_and_retention.pdfhttp://web.archive.org/web/20220102161033/https://www.psp.eu/media/allgemein/eu-compendium_e-invoicing_and_retention.pdf https://ec.europa.eu/digital-building-blocks/wikis/display/HOME/2021+eInvoicing+Country+factsheets https://www.signaturportal.de/tutorial,62.html
 
 === What were the changes in the latest ZUGFeRD/Factur-X version?
+
+=== ZUGFeRD/Factur-X: XML or PDF: What do I have to use, check, respectively archive how?
+
+In Germany, if you are a company, you will have to check and use XML (source) and archive at least XML (GoBD page 30, §9.1 Maschinelle Auswertbarkeit).
+As customer, you can decide if you check&use XML or PDF. However, and despite the spec says the contents should be identical, due to possible fraud please do not check e.g. only the PDF and then pay the XML version. Unfortunately, if you wanted to auto detect deviations you need OCR and a invoice recognition and your results will most likely not be perfect. 
+Hoewever, if you receive by email, unless there is any invoice related information in the email text (like "as agreed on the phone just pay half of it") you usually have no obligation to archive the email.
 
 === How to calculate and round invoices? How many decimals are allowed?
 
