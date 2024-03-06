@@ -228,9 +228,13 @@ I have tried to list all source solutions on link:index.adoc[this page]
 
 === How to write ZUGFeRD
 
+=== How can I distinguish ZF1 from ZF2=FX1?
+
+The name of the embedded file is ZUGFeRD-invoice.xml for ZF1 and zugferd-invoice.xml, factur-x.xml or xrechnung.xml for ZF2. And the root element is CrossIndustryDocument for ZF1 and CrossIndustryInvoice for ZF2.
+
+
 ==== Requirements
 
-==== How can I check
 
 === What is the content-difference between ZUGFeRD/Factur-X and XRechnung
 
