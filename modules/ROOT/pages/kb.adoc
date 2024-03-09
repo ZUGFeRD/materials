@@ -208,3 +208,43 @@ https://www.verband-e-rechnung.org/XRechnung/
 
 === Why do UBL and CII differ?
 https://www.oasis-open.org/committees/download.php/57887/UBL%20and%20CEFACT%20update%20-%2020160407.pdf
+
+
+
+=== What is a profile, which ones exist and why?
+
+=== PDF/A
+
+Converting any PDF input to PDF/A-3 is out of scope for the
+mustangproject tool&library, because it is too complex, you can not just
+filter out some things, usually you need to completely rebuild a valid
+pdf/a, ghostscript is a very good and AFAIK the only open source
+solution which can handle that (see
+https://github.com/ZUGFeRD/mustangproject/issues/164#issuecomment-640046774).
+
+Please note that it’s out of scope for the tool&library does not mean
+that it’s out of scope for mustang server, which could use ghost4j for
+that, actually I do have some ghost4j-questions.
+
+=== Ghostscript, general
+
+Ghostscript did an amazing work years ago already and implemented the
+functionality (Ext_Metadata
+https://www.ghostscript.com/doc/VectorDevices.htm#Extensions) which was
+required to generate proper ZUGFeRD PDFs. They did not announce it very
+much but https://bugs.ghostscript.com/show_bug.cgi?id=696472 gives you a
+start in case you are interested.
+
+=== Schematron
+
+if you e.g. want to check the CEN schematron you might have to get that
+schematron, java, saxon, and the ``ISO Schematron'' transformation and
+run saxon with the ISO Schematron to create a XSLT-File from the
+schematron file and then run this generated XSLT file on your input.
+There is a description for mac on
+https://blog.eight02.com/2011/05/validating-xml-with-iso-schematron-on.html
+
+
+=== Can I use any PDF as basis for a ZUGFeRD/Factur-X
+ZUGFeRD is based on archivable (PDF/A) PDFs that embed all the data required fordata required for display, such as fonts.A free
+possibility to convert "normal" PDF files is, for example, Ghostscript.Ghostscript.
