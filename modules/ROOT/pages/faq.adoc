@@ -170,6 +170,17 @@ ZUGFeRD 2.x (2.3.1 is the newest) and
 XRechnung 3.0.1 (updates once a year).
 
 
+=== ZUGFeRD/Factur-X: XML or PDF: What do I have to use, check, respectively archive how?
+
+In Germany, if you are a company, you will have to check and use XML (source https://www.dstv.de/wp-content/uploads/2023/10/BMF_2023-0922192-R.pdf) and archive also at least XML (GoBD page 30, §9.1 Maschinelle Auswertbarkeit).
+As customer, you can decide if you check&use XML or PDF. However, and despite the spec says the contents should be identical, due to possible fraud please do not check e.g. only the PDF and then pay the XML version. Unfortunately, if you wanted to auto detect deviations you need OCR and a invoice recognition and your results will most likely not be perfect.
+Hoewever, if you receive by email, unless there is any invoice related information in the email text (like "as agreed on the phone just pay half of it") you usually have no obligation to archive the email.
+
+=== How to calculate and round invoices? How many decimals are allowed?
+
+https://www.beuth.de/de/norm/din-en-16931-1/327729047
+
+== B2B
 === Continous Transaction Control (CTC) (USt-Meldesystem)
 
 There are different types range of Continous Transaction Control (CTC) systems, in german called VAT reporting system types (Umsatzsteuer-Meldesystem) (cf
@@ -256,6 +267,17 @@ https://www.ferd-net.de/aktuelles/meldungen/public-review-des-entwurfs-fuer-orde
 
 I have tried to list all source solutions on link:index.adoc[this page]
 
+=== How to write ZUGFeRD
+
+=== How can I distinguish ZF1 from ZF2=FX1?
+
+The name of the embedded file is ZUGFeRD-invoice.xml for ZF1 and zugferd-invoice.xml, factur-x.xml or xrechnung.xml for ZF2. And the root element is CrossIndustryDocument for ZF1 and CrossIndustryInvoice for ZF2.
+
+
+==== Requirements
+
+
+=== What is the content-difference between ZUGFeRD/Factur-X and XRechnung
 
 
 
