@@ -165,9 +165,10 @@ was considered sufficient.
 
 
 === Which version of which standard do I have to use?
-CII 1.0, incorrectly a.k.a. "2016b" or UBL 2.1,
-ZUGFeRD 2.x (2.3.1 is the newest) and
-XRechnung 3.0.1 (updates once a year).
+<a href="https://www.beuth.de/de/technische-regel/din-cen-ts-16931-2/274991011">EN16931-2</a> mentions "2016b" of <a href="https://unece.org/trade/uncefact/xml-schemas">Cross Industry Invoice</a> CII or UBL 2.1,
+ZUGFeRD 2.x (2.3.1 is the newest) and <a href="https://xeinkauf.de/xrechnung/">XRechnung</a> 3.0.1 (updates once a year) are compliant to the new B2B rules. Please note
+that ZUGFeRD 2.x equals Factur-X 1.x. ZUGFeRD version 1 has never been officially deprecated but is likely to be
+discontinued and it's not compliant to EN16931, so neither usable for B2G invoices nor for B2B invoices in the future.
 
 
 === ZUGFeRD/Factur-X: XML or PDF: What do I have to use, check, respectively archive how?
