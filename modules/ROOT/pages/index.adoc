@@ -1,7 +1,7 @@
 = Open-Source Libraries and Tools
 :example-caption!:
 
-link:imprint.adoc[Inofficial] page on free Factur-X, Order-X and Deliver-X (and XRechnung) libraries and tools.
+link:imprint.adoc[Unofficial] page on free Factur-X, Order-X and Deliver-X (and XRechnung) libraries and tools.
 
 link:https://www.ferd-net.de/standards/zugferd/index.html[ZUGFeRD]/Factur-X is a standard to embed machine readable XML in electronic invoice PDFs.
 
@@ -22,6 +22,8 @@ link:https://www.ferd-net.de/standards/zugferd/index.html[ZUGFeRD]/Factur-X is a
 * link:https://konik.io/[Konik] GPL Java and C# library for ZUGFeRD 1
 * link:https://mustangproject.org/[Mustang] is an APL Java and link:https://mustangproject.org/net/[.net] library for ZUGFeRD 1 and 2(=Factur-X) and a command-line tool to extract, combine and validate. It's open-source link:https://github.com/ZUGFeRD/mustangserver[REST API] has been continued link:https://mustangproject.org/server/[commercially].
 
+=== Go
+* link:https://github.com/invopop/gobl.xinvoice[gobl.xinvoice] library and CLI tool for converting link:https://gobl.org[GOBL] JSON invoices into either XRechnung (UBL or CII), Factur-X, and ZUGFeRD XML formats, and vice versa. Apache 2.0 license.
 
 == PDF tools
 === Creation
