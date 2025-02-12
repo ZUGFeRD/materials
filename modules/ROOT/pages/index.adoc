@@ -51,6 +51,7 @@ link:https://www.ferd-net.de/standards/zugferd/index.html[ZUGFeRD]/Factur-X is a
 == Other tools
 === ZUGFeRD/Factur-X Creating
 * The open source accounting application link:https://www.fakturama.info/[Fakturama]
+* The open source Kotlin desktop application https://github.com/OpenIndex/ZUGFeRD-Manager[ZUGFeRD-Manager] for adding ZUGFeRD xml to an existing PDF
 * link:https://github.com/akretion/factur-x-libreoffice-extension[Factur-X extension for LibreOffice] is a LibreOffice extension to generate Factur-X invoices from LibreOffice Calc published under the GPL licence (link:https://www.youtube.com/watch?v=ldD-1W8yIv0[video tutorial])
 * link:https://github.com/gflohr/e-invoice-eu[e-invoice-eu] is a link:https://nestjs.com/[NestJS] service for generating EN16931 compliant electronic invoices from various spreadsheet formats or JSON. Supported output formats are Factur-X/ZUGFeRD, XRechnung-UBL, XRechnung-CII, UBL, and CII.
 
